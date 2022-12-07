@@ -1,0 +1,31 @@
+<!-- bdtravelsolution amresorts outlet2021 live-the-experience DO sunscape -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Intro</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="myApp">
+        <h1>Hola</h1>
+        <!-- <small>{{newQuote}}</small> -->
+        <input type="text"
+               v-model="newQuote"
+               v-on:keypress.enter="addQuote">
+        <ul>
+
+      
+      <li v-for="({quote,author},index) in quotes">
+        <span >{{index+1}}-{{quote}}</span>
+        <blockquote v-show="author"> - {{author}} </blockquote>
+        <!-- <blockquote v-if="author"> - {{author}} </blockquote>  No lo construye -->
+        
+        </li>
+        </ul>
+        <!-- {{quotes}} -->
+    </div>
+    <script src="app.js"></script>
+
+</body>
+</html>
